@@ -13,6 +13,12 @@ ChudStream is an independent fork of [CloudStream 3](https://github.com/reclouds
 
 Download the APK from the release page for the channel you want. ChudStream can also check this repository for updates inside the app. Android verifies the signing certificate before it accepts an update.
 
+## Version 1.1.1: one-time reinstall required
+
+ChudStream release versions now use three numbers: `major.minor.patch` (for example, **1.1.1**). The full Android version also includes the upstream base version, such as `4.8.0-cs1.1.1`.
+
+**For version 1.1.1 only:** ChudStream begins using its persistent signing key. Android will not install this release over an older ChudStream APK because that APK was signed with a different, temporary key. Uninstall the existing ChudStream build once, then install the matching 1.1.1 APK manually. Every later update in the same channel will install normally without another reinstall.
+
 ## What ChudStream adds
 
 ### One show, more sources
