@@ -2,7 +2,7 @@
 
 ### A more unified CloudStream experience for Phone and Android TV
 
-ChudStream is an independent fork of [CloudStream 3](https://github.com/recloudstream/cloudstream). This repository is the official, public home for signed ChudStream APK releases; it intentionally contains no application source code.
+ChudStream is an independent fork of [CloudStream 3](https://github.com/recloudstream/cloudstream). This repository is the official, public home for signed ChudStream APK releases.
 
 ## Choose your channel
 
@@ -48,4 +48,4 @@ For upstream source, documentation, and support, visit [CloudStream 3](https://g
 
 ## Release integrity
 
-The ChudStream source repository is private. This public repository exists so app users can download signed releases and receive in-app updates without receiving access credentials to the source repository.
+The ChudStream source repository is private. This public repository exists so app users can download signed releases and receive in-app updates.
