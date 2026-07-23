@@ -1,7 +1,7 @@
 # ChudStream
 
 <p align="center">
-  <strong>A unified, high-performance CloudStream experience for Phone and Android TV</strong>
+  <strong>A unified, high-performance CloudStream experience for Phone, Tablet and Android TV</strong>
 </p>
 
 <p align="center">
