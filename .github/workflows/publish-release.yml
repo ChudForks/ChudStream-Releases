@@ -1,0 +1,41 @@
+name: Publish ChudStream Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out tagged release files
+        uses: actions/checkout@v4
+
+      - name: Select release channel
+        id: channel
+        shell: bash
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if [[ "$TAG" =~ -[0-9a-f]{7,}$ ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+            echo "asset=release-assets/ChudStream-prerelease-debug.apk" >> "$GITHUB_OUTPUT"
+            echo "title=ChudStream Prerelease ${TAG#v}" >> "$GITHUB_OUTPUT"
+            echo "body=Rolling prerelease build for testing the latest ChudStream changes." >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+            echo "asset=release-assets/ChudStream-stable-debug.apk" >> "$GITHUB_OUTPUT"
+            echo "title=ChudStream Stable ${TAG#v}" >> "$GITHUB_OUTPUT"
+            echo "body=Tested ChudStream Stable milestone release." >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ steps.channel.outputs.title }}
+          prerelease: ${{ steps.channel.outputs.prerelease }}
+          body: ${{ steps.channel.outputs.body }}
+          files: ${{ steps.channel.outputs.asset }}

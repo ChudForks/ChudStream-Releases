@@ -1,25 +1,51 @@
-# ChudStream Releases
+# ChudStream
 
-This repository distributes official ChudStream Android APK releases. It contains no application source code.
+### A more unified CloudStream experience for Phone and Android TV
 
-## Download channels
+ChudStream is an independent fork of [CloudStream 3](https://github.com/recloudstream/cloudstream). This repository is the official, public home for signed ChudStream APK releases; it intentionally contains no application source code.
 
-- **Stable** — tested milestone releases. Stable APKs are published only when ChudStream's version is intentionally bumped.
-- **Prerelease** — rolling debug builds from the latest development commit. Use it to test recent changes and report regressions.
+## Choose your channel
 
-Install only an APK that matches the channel you want. Android verifies the app signing certificate before an update can be installed.
+| Channel | Best for | What to expect |
+| --- | --- | --- |
+| **Stable** | Everyday viewing | Tested milestone builds. Published only when a ChudStream version is intentionally released. |
+| **Prerelease** | Trying the latest improvements | Rolling debug builds from the newest development commit. Expect faster changes and occasional rough edges. |
 
-## ChudStream and CloudStream 3
+Download the APK from the release page for the channel you want. ChudStream can also check this repository for updates inside the app. Android verifies the signing certificate before it accepts an update.
 
-ChudStream is an independent fork of [CloudStream 3](https://github.com/recloudstream/cloudstream). It retains CloudStream's Android streaming-player foundation while adding ChudStream-specific work, including:
+## What ChudStream adds
 
-- ChudStream branding, Stable and prerelease channels, and in-app updates.
-- A pre-seeded, English-focused extension experience and safety-oriented plugin filtering.
-- Unified multi-provider search, source switching, automatic source fallback, and cross-provider watch-progress synchronization.
-- Refined Phone and Android TV interfaces, including D-pad-focused player and settings improvements.
+### One show, more sources
 
-ChudStream is not affiliated with or endorsed by the CloudStream 3 project. For upstream source, documentation, and support, visit the [CloudStream repository](https://github.com/recloudstream/cloudstream).
+- Searches combine matching results from different providers into one cleaner grid.
+- Open a show directly, then choose another matching provider whenever you need one.
+- Switch providers from the player without losing your place.
+- If a source has no playable links, ChudStream can try your other matched sources automatically.
 
-## Source availability
+### Progress that follows the show
 
-The ChudStream source repository is private. This public repository exists solely to make signed application updates available to app users without distributing access credentials.
+- Watch progress and watched status can carry across matching providers.
+- Continue Watching and Library entries are grouped to avoid duplicate cards for the same title.
+- Saved source matches remain available when you reopen a title from your Library or history.
+
+### Built for a simpler first run
+
+- English-first setup with a useful selection of extension repositories ready to explore.
+- A safety-oriented extension filter excludes selected plugins associated with exploitative or non-consensual material.
+- The setup flow is shorter and gets you to extensions and media preferences sooner.
+
+### Made for the screen you use
+
+- Refined Phone layout with familiar controls and source selection.
+- Dedicated Android TV navigation, a D-pad-friendly episode drawer, and a focused in-player settings deck.
+- Improved TV fast-forward controls and source, caption, audio, and video settings that are easier to reach from the remote.
+
+## ChudStream and upstream CloudStream 3
+
+ChudStream retains CloudStream 3's Android streaming-player foundation while focusing on cross-provider continuity, a tailored English-first default experience, and additional Phone and Android TV polish. It is not affiliated with or endorsed by the CloudStream 3 project.
+
+For upstream source, documentation, and support, visit [CloudStream 3](https://github.com/recloudstream/cloudstream).
+
+## Release integrity
+
+The ChudStream source repository is private. This public repository exists so app users can download signed releases and receive in-app updates without receiving access credentials to the source repository.
